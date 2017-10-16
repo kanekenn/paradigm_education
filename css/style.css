@@ -18,25 +18,22 @@ ul {
 	overflow: hidden;
 }
 
+.linebreak {
+	display: none;
+}
+
 /* Top left navbar logo */
 #toplogo {
-	width: 250px;
-	height: 125px;
 	padding: 0;
 	margin: 0;
 	vertical-align: top;
-	background-color: black;
 	display: inline-block;
-	float: left;
 	position: absolute;
 }
-
-#toplogooverlap {
-	width: 250px;
-	height: 125px;
-	margin: 0;
+#toplogo img {
+	height: 80px;
 	padding: 0;
-	display: inline;
+	margin: 0;
 }
 
 /* Header/navbar */
@@ -47,16 +44,20 @@ header {
 	padding: 0;
 	position: fixed;
 	width: 100%;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: black
 }
 
 header a {
 	display: inline-block;
 	color: #191919;
 	text-decoration: none;
-	font-size: 20px;
-	font-family: Open Sans;
+	font-size: 16px;
+	font-family: Quicksand;
 	padding: 0 50px 0 50px;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 header ul {
@@ -71,27 +72,38 @@ header li {
 
 header .current a {
 	color: #F2F2F2;
-	border-width: 3px 0 3px 0;
-	border-color: #D8D8D8;
-	border-style: solid;
 }
-header a:hover {
+
+nav a {
+	-webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+nav a:hover {
 	color: #d8d8d8;
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.1);
+	-webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
 
 }
 
 nav {
 	margin: 0 auto;
 	width: 100%;
-	line-height: 119px;
+	line-height: 86px;
 	text-align: center;
 }
 
 /* Showcase */
 #showcase {
-	padding-top: 175px;
+	padding-top: 125px;
 	min-height: 400px;
 	background: url('../img/showcase.jpg') no-repeat;
 	background-position: center;
@@ -135,66 +147,6 @@ nav {
 	font-size: 16px;
 }
 
-#tutorpic {
-	-webkit-filter: brightness(100%);
-	filter: brightness(100%);
-	-webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    transition: all 0.75s ease;
-}
-
-#tutorbox:hover > #tutorpic {
-	-webkit-filter: brightness(0%);
-	filter: brightness(0%);
-	-webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    transition: all 0.75s ease;
-}
-
-#personalizedpic {
-	-webkit-filter: brightness(100%);
-	filter: brightness(100%);
-	-webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    transition: all 0.75s ease;
-}
-
-#personalizedbox:hover > #personalizedpic {
-	-webkit-filter: brightness(0%);
-	filter: brightness(0%);
-	-webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    transition: all 0.75s ease;
-}
-
-#subjectspic {
-	-webkit-filter: brightness(100%);
-	filter: brightness(100%);
-	-webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    transition: all 0.75s ease;
-}
-
-#subjectsbox:hover > #subjectspic {
-	-webkit-filter: brightness(0%);
-	filter: brightness(0%);
-	-webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    transition: all 0.75s ease;
-}
-
 footer {
 	line-height: 25px;
 	text-align: center;
@@ -235,4 +187,52 @@ footer img:hover {
     -o-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+/* Media Queries */
+@media(max-width: 1600px) {
+
+	header #toplogo {
+		position: static;
+		display: block;
+	}
+
+	header #toplogo img {
+		height: 60px;
+	}
+
+	header a {
+		padding: 0 35px 0 35px;
+	}
+
+	nav {
+		line-height: 40px;
+	}
+
+
+	.container {
+		text-align: center;
+	}
+}
+
+@media(max-width: 768px) {
+	#boxes .box {
+		display: block;
+		margin: auto;
+		width: 150px;
+	}
+
+		header a {
+		letter-spacing: 1px;
+		padding: 0 15px 0 15px;
+	}
+
+	#showcase {
+	padding-top: 100px;
+
+	}
+
+	.linebreak {
+		display: inline;
+	}
 }
